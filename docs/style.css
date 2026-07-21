@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@keyframes flutuar{
+  0%{
+    transform:translate(-50%,0);
+  }
+  50%{
+    transform: translate(-50%,10px);
+  }
+  100%{
+    transform:translate(-50%,0);
+  }
 
+}
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +21,7 @@ body {
   font-family: 'Public Sans', sans-serif;
   background: white;
 }
-
+/*  /   /   /   Header  /   /   /   */
 .header {
   position: fixed;
   top: 0;
@@ -115,4 +126,42 @@ menu a::after{
 
 main {
   margin-top: 110px;
+}
+/*  /   /   /   HERO  /   /   /   */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .55);
+}
+
+.logo-hero{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 420px;
+}
+
+.scrool {
+  position:absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  color:white;
+  font-size:18px;
+  animation: flutuar 2s infinite;
 }
