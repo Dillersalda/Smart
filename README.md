@@ -1,1 +1,1 @@
-# Smart
+Site criado para ser um prototipo de portifolio para a empresa Smartblin!
