@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @keyframes flutuar{
   0%{
     transform:translate(-50%,0);
@@ -145,10 +146,16 @@ main {
   object-fit: cover;
 }
 
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
+
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, .55);
+  z-index: 0;
 }
 
 .logo-hero{
@@ -167,4 +174,13 @@ main {
   color:white;
   font-size:18px;
   animation: flutuar 2s infinite;
+}
+
+.subtitulo{
+  font-family: "orbitron", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 15px;
 }
