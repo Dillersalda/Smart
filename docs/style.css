@@ -45,7 +45,7 @@ body {
   transition: 0.5s;
 }
 
-.header .ativo{
+.header.ativo{
   transform: translateY(0);
   opacity: 1;
 }
