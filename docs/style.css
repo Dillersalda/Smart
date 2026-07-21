@@ -42,6 +42,7 @@ body {
   box-shadow:0 2px 18px rgba(125, 255, 77, 0.25) ;
   transform: translateY(-100%);
   opacity: 0;
+  transition: 0.5s;
 }
 
 .header .ativo{
