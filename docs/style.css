@@ -227,28 +227,38 @@ main {
   gap:50px;
   background: linear-gradient(
     145deg,
-    #111,
-    #181818
+    #111111,
+    #1a1a1a
   ); 
+  border: 1px solid rgba(255,255 ,255,.05);
   border-radius: 20px;
   padding: 40px;
-  border-left: 5px solid #59ff59;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(89,255,89,.6);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255,255 ,255,.02);
   transition: 0.4s ease;
   position: relative;
   overflow: hidden;
 }
 
+.card-noticia::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255 ,255,.05), transparent 35% );
+  pointer-events: none;
+}
 .card-noticia::before{
   content: "";
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
+  right: -120px;
+  top:-120px;
+  border-radius: 50%;
   background: #59ff59;
-  filter:blur(120px);
-  opacity:0.15;
-  right:-100px;
-  top:-100px;
+  filter:blur(130px);
+  opacity:0.12;
+  pointer-events:none;
 }
 
 .card-noticia:hover{
@@ -299,7 +309,7 @@ main {
 }
 
 .imagem-noticia img{
-  width: 120%;
+  width: 105%;
   max-width: none;
   position: relative;
   z-index: 1;
