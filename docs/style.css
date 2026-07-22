@@ -362,6 +362,7 @@ main {
   width:35px;
   border-radius: 20px;
   background: #59ff59;
+  box-shadow: 0 0 12px rgba(89,255,89,.5);
 }
 
 .btn-anterior,.btn-proximo{
@@ -387,5 +388,5 @@ main {
   justify-content: center;
   align-items: center;
   gap:10px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
