@@ -20,8 +20,8 @@
 }
 
 body {
-  font-family: 'Public Sans', sans-serif;
-  background: white;
+  margin: 0;
+  background-color: #050505;
 }
 /*  /   /   /   Header  /   /   /   */
 .header {
@@ -130,6 +130,13 @@ menu a::after{
 
 main {
   margin-top: 110px;
+ background: linear-gradient(
+  to bottom,
+  #050505,
+  #0d0d0d,
+  #12210d,
+  #050505
+ );
 }
 /*  /   /   /   HERO  /   /   /   */
 .hero {
@@ -180,7 +187,12 @@ main {
   font-family: "orbitron", sans-serif;
   font-size: 14px;
   color: #fff;
-  letter-spacing: 4px;
+  letter-spacing: 6px;
   text-transform: uppercase;
   margin-top: 15px;
+  position: absolute;
+  top:62%;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
