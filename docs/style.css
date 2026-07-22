@@ -196,3 +196,92 @@ main {
   transform: translateX(-50%);
 
 }
+
+/*    /     /     /       /       /     CARDS E CARROSSEL \   \       \       \       */
+
+
+.novidades{
+  width: 100%;
+  padding: 100px 8%;
+}
+
+.titulo-novidades{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.titulo-novidades h2{
+  color: white;
+  font-size: 42px;
+}
+
+.titulo-novidades p{
+  color: #bcbcbc;
+  margin-top: 10px;
+}
+
+.card-noticia{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:50px;
+  background: linear-gradient(
+    145deg,
+    #111,
+    #181818
+  );
+  border-radius: 20px;
+  padding: 40px;
+  border-left: 5px solid #59ff59;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+}
+
+.card-noticia:hover{
+  transform: translateY(-8px);
+}
+
+.texto-noticia {
+  width: 45%;
+}
+
+.texto-noticia h3{
+  color: white;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.texto-noticia p{
+  color: #cfcfcf;
+  line-height: 1.8;
+}
+
+.texto-noticia a{
+  color: #59ff59;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.imagem-noticia{
+  width: 55%;
+  position: relative;
+}
+
+.imagem-noticia::before{
+  content: "";
+  position: absolute;
+  width:250px;
+  height: 250px;
+  background: #59ff59;
+  filter:blur(100px);
+  opacity: 0.25;
+  right: 20%;
+  top: 20%;
+}
+
+.imagem-noticia img{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+}
