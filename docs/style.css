@@ -444,6 +444,7 @@ transition: .3s;
 }
 
 @media (max-width:768px){
+
   .card-noticia{
     flex-direction: column;
     text-align: center;
@@ -489,7 +490,7 @@ transition: .3s;
     gap: 30px;
     border-radius: 18px;
   }
-  .texto-noticia{
+  .texto-noticia p{
     font-size: .95rem;
     line-height: 1.8;
   }
@@ -516,40 +517,49 @@ transition: .3s;
 }
 
 @media (max-width:400px){
-  .texto-noticia{
-    font-size: 1.8rem;
+  .novidades{
+    padding: 60px 4%;
   }
-}
-
-@media (max-width:360px){
   .card-noticia{
-    flex-direction: column;
     padding: 20px;
     gap:25px;
   }
-  .texto-noticia,.imagem-noticia{
-    width: 100%;
-  }
-  .texto-noticia h3{
-    font-size: 2rem;
+  .titulo-novidades h2{
+    font-size: 1.8rem;
   }
   .texto-noticia p{
-    font-size: .95rem;
-    line-height: 1.8;
-  }
-  .imagem-noticia{
-    width:100%;
-    justify-content: center;
+    font-size: .9rem;
+    line-height: 1.7;
   }
   .imagem-noticia img{
-    width:100%;
-    max-width: 280px;
+    max-width: 260px;
   }
   .btn-noticia{
-    width: 100%;
-    justify-content: center;
+    font-size: .95rem;
+    padding: 14px;
   }
-  .controles-carrossel{
-    margin-top: 15px;
+  .tag-lancamento{
+    font-size: .7rem;
+    letter-spacing: 1px;
   }
+
+}
+
+@media (max-width:360px){
+.card-noticia{
+  padding: 18px;
+}
+.titulo-novidades h2{
+  font-size: 1.6rem;
+}
+.texto-noticia h3{
+  font-size: 1.4rem;
+}
+.imagem-noticia img{
+  max-width: 220px;
+}
+.btn-noticia{
+  padding: 12px;
+  font-size: .9rem;
+}
 }
