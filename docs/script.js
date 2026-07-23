@@ -87,9 +87,9 @@ const novidades = [
 
 {  
     tag:"BOLETO",
-    titulo: "SEU APARELHO NOVO EM ATÉ 18X",
+    titulo: "SEU APARELHO NOVO EM ATÉ 24X",
     descricao: "Celular no boleto sem consulta SPC ou Serasa em até 18x! Confira nossas opções de boletos e veja a que melhor lhe atende!",
-    imagem: "assets/Images/boleto.png"
+    imagem: "assets/Images/boleto.jpg"
 },
 
 {
@@ -201,3 +201,4 @@ function reiniciarAutoplay(){
 
     autoplay = setInterval(proximaNoticia, 5000)
 };
+
