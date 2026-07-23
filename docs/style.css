@@ -278,6 +278,11 @@ main {
   margin-top: 10px;
 }
 
+.trocando{
+ opacity: 0;
+ transform: translateY(15px);
+}
+
 .card-noticia{
   display: flex;
   justify-content: space-between;
@@ -483,6 +488,14 @@ transition: .3s;
 
 .menu-overlay{
   display: none;
+}
+
+.tag-lancamento,
+.texto-noticia h3,
+.texto-noticia p,
+.imagem-noticia img{
+
+  transition: .3s ease;
 }
 /*  /   /   /   /   Menu Hamburguer /   /   /   /   */
 

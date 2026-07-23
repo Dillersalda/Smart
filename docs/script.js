@@ -1,3 +1,6 @@
+// ======================================
+// Header Scroll
+// ======================================
 window.addEventListener("scroll", () => 
 {
 
@@ -8,7 +11,9 @@ window.addEventListener("scroll", () =>
         header.classList.remove("ativo");
     }
 });
-
+// ======================================
+// Menu Mobile
+// ======================================
 const btnMenu = document.querySelector(".menu-mobile");
 console.log(btnMenu)
 const menu = document.querySelector(".menu");
@@ -66,3 +71,122 @@ window.addEventListener("resize", () => {
         
     }
 });
+
+// ============================================
+// Carrossel Novidades
+// ============================================
+const indicadores = document.querySelectorAll(".indicador");
+const novidades = [
+    {
+    tag:"NOVO MODELO",
+    titulo: "NOVA SCOOTER G15",
+    descricao: "Conheça o mais novo modelo da Scooter eletrica disponível em nossas unidades. Mais autonomia, design renovado e painel totalmente digital.",
+    imagem: "assets/Images/scooter.png"
+},
+
+{  
+    tag:"BOLETO",
+    titulo: "SEU APARELHO NOVO EM ATÉ 18X",
+    descricao: "Celular no boleto sem consulta SPC ou Serasa em até 18x! Confira nossas opções de boletos e veja a que melhor lhe atende!",
+    imagem: "assets/Images/boleto.png"
+},
+
+{
+    tag:"SERVIÇO",
+    titulo: "Assistência Tecnica",
+    descricao: "Seu aparelho pronto em até 40 minutos em nossa Assistência Tecnica Expecializada!.",
+    imagem: "assets/Images/Assistencia.png"
+}
+];
+
+const tag = document.querySelector("#tag-noticia");
+const titulo = document.querySelector("#titulo-noticia");
+const descricao = document.querySelector("#descricao-noticia");
+const imagem = document.querySelector("#imagem-noticia");
+
+let indiceAtual = 0;
+
+function atualizarNoticia(){
+   const noticia = novidades[indiceAtual];
+
+   const elementos = [
+    tag,
+    titulo,
+    descricao,
+    imagem
+   ];
+
+   elementos.forEach(elemento =>{
+    elemento.classList.add("trocando");
+   });
+
+   setTimeout(() =>{
+
+    tag.textContent = noticia.tag;
+    titulo.textContent = noticia.titulo;
+    descricao.textContent = noticia.descricao;
+    imagem.src = noticia.imagem;
+
+    elementos.forEach(elemento =>{
+        elemento.classList.remove("trocando");
+    });
+
+    // Atualiza os Indicadores
+    indicadores.forEach((indicador,indice) => {
+        indicador.classList.toggle("ativo", indice === indiceAtual);
+    });
+
+   },300);
+}
+
+atualizarNoticia();
+
+
+
+indicadores.forEach((indicador,indice) => {
+    indicador.addEventListener("click", () => {
+        indiceAtual = indice;      
+        atualizarNoticia();
+    });
+
+});
+
+
+const btnAnterior = document.querySelector(".btn-anterior");
+const btnProximo = document.querySelector(".btn-proximo");
+
+btnProximo.addEventListener("click", () => {
+
+    indiceAtual++;
+
+    if(indiceAtual >= novidades.length){
+        indiceAtual = 0;
+    }
+atualizarNoticia();
+
+});
+
+btnAnterior.addEventListener("click", () =>{
+        indiceAtual--;
+    if(indiceAtual < 0){
+        indiceAtual = novidades.length -1;
+    }
+
+    atualizarNoticia();
+});
+
+// Automaziar o Carrossel
+
+function proximaNoticia(){
+
+    indiceAtual++;
+
+    if(indicadores => novidades.length){
+        indiceAtual = 0;
+    }
+
+    atualizarNoticia();
+
+};
+
+
