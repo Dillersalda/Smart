@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartBlin</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
   <!-- Hero -->
@@ -35,13 +35,28 @@
           <li><a href="#">Localização</a></li>
           <li><a href="#">SAC</a></li>
         </ul>
+        <div class="menu-cliente">
+          <button class="btn-cliente">
+            Área do Cliente
+            <i data-lucide="user-round"></i>
+          </button>
+        </div>
       </nav>
 
+    
+      <div class="menu-overlay"></div>
     <div class="conta">
-    <button>Área do Cliente</button>
-  
-    <button class="menu-mobile" aria-label="Abrir Menu"></button>
+      <button class="btn-cliente">Área do Cliente
+        <i data-lucide="user-round"></i>
+      </button>
+    </div>  
+    <button class="menu-mobile" aria-label="Abrir Menu">
+      <i data-lucide="menu"></i>
+    </button>
+
+
   </header>
+   <div class="menu-overlay"></div>
   <!-- Fim da Header -->
 <main>
 <section class="novidades">
@@ -84,6 +99,8 @@
   </div>
 </section>
 </main>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>lucide.createIcons();</script>
   <script src="script.js"></script>
 </body>
 </html>
