@@ -475,6 +475,9 @@ transition: .3s;
   .novidades{
     padding: 70px 5%;
   }
+  .titulo-novidades{
+    margin-bottom: 40px;
+  }
   .titulo-novidades h2{
     font-size:2rem;
   }
@@ -483,6 +486,19 @@ transition: .3s;
   }
   .card-noticia{
     padding: 25px;
+    gap: 30px;
+    border-radius: 18px;
+  }
+  .texto-noticia{
+    font-size: .95rem;
+    line-height: 1.8;
+  }
+  .tag-lancamento{
+    font-size: .75rem;
+    padding: 5px 12px;
+  }
+  .imagem-noticia img{
+    
   }
   .btn-noticia{
     width: 100%;
