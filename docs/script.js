@@ -75,6 +75,7 @@ window.addEventListener("resize", () => {
 // ============================================
 // Carrossel Novidades
 // ============================================
+
 const indicadores = document.querySelectorAll(".indicador");
 const novidades = [
     {
@@ -97,6 +98,8 @@ const novidades = [
     descricao: "Seu aparelho pronto em até 40 minutos em nossa Assistência Tecnica Expecializada!.",
     imagem: "assets/Images/Assistencia.png"
 }
+
+    
 ];
 
 const tag = document.querySelector("#tag-noticia");
