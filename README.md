@@ -43,20 +43,6 @@ Além de apresentar os serviços da empresa, este projeto também faz parte da m
 
 ---
 
-📂 Estrutura do projeto
-
-SmartBlin/
-│
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── img/
-│   └── video/
-│
-├── index.html
-└── README.md
-
----
 
 🚧 Roadmap
 
