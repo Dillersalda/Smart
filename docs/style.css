@@ -605,6 +605,15 @@ position: relative;
 display: flex;
 flex-direction: column;
 min-height: 540px;
+box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+}
+
+.card-produto:hover .imagem-produto{
+  transform: scale(1.04);
+}
+
+.card-produto:hover .badge-produto{
+  transform: rotate(-5deg), translateX(6px);
 }
 
 .badge-produto{
@@ -648,7 +657,7 @@ min-height: 540px;
 
 .card-produto:hover{
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .35);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, .5);
 }
 
 .card-produto:hover img{
@@ -670,7 +679,7 @@ min-height: 540px;
 }
 
 .imagem-produto{
-  height: 260px;
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -707,6 +716,9 @@ min-height: 540px;
   display:inline-flex;
   align-items: center;
   gap: 8px;
+  padding: 12px 22px;
+  border: 1px solid rgba(89,255,89,.25);
+  border-radius: 999px;
   font-family: "Sora",sans-serif;
   font-size: .95rem;
   font-weight: 600;
@@ -718,14 +730,17 @@ min-height: 540px;
 }
 
 .btn-card:hover{
+  background: #59ff59;
+  color: #000;
   gap:14px;
-  color:#7DFF4D
+  
 }
 
 .conteudo-produto{
-  padding:28px;
+  padding:32px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
   flex: 1;
   border-top: 1px solid rgba(255,255 ,255,.08);
 }
