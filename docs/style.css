@@ -607,14 +607,35 @@ position: relative;
 .badge-produto{
   position: absolute;
   top: -18px;
-  left: 25px;
+  left: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
+  gap: 12px;
+  padding: 8px 18px;
   background: #111111;
-  border:1px solid rgba(89,255,89,.4);
-  z-index: 5;
+  border:1px solid rgba(89,255,89,.35);
+  z-index:10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.icone-badge{
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  background: #59ff59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: .9rem;
+}
+
+.badge-produto span{
+  color: #59ff59;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .card-produto:hover::before{
