@@ -619,7 +619,7 @@ min-height: 540px;
   border:1px solid rgba(89,255,89,.25);
   z-index:10;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  transform: rotate(-8deg);
+  transform: rotate(-6deg);
 }
 
 .icone-badge{
