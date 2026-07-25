@@ -219,3 +219,13 @@ const observerProdutos = new IntersectionObserver((entries) => {
 cardsProdutos.forEach(card => {
     observerProdutos.observe(card);
 });
+
+cardsProdutos.forEach((card, index) => {
+    card.style.transitionDelay = '{index * 0.15}s';
+    observerProdutos.observe(card);
+});
+
+if(entry.isIntersecting){
+    entry.target.classList.add("aparecer");
+    observerProdutos.unobserve(entry.target);
+}
