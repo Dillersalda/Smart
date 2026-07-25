@@ -832,6 +832,27 @@ transform .7s ease;
 
 /* mapa e video */
 
+.titulo-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(89,255,89,.15);
+}
+
+.titulo-card i{
+  color: #59ff59;
+  font-size: 22px;
+}
+
+.titulo-card h3{
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Sora", sans-serif;
+}
+
 .conteudo-loja{
   display: grid;
   grid-template-columns: 1fr 1fr;
