@@ -804,32 +804,65 @@ transform .7s ease;
   margin-top: 12px;
 }
 
-/*    /     /     /     Botões Lojas /    /   /     */
-
-.lojas{
-  display:flex;
+.seletor-lojas{
+  display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 50px;
+  align-items: center;
+  gap: 25px;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 }
 
-.loja{
-  padding: 14px 24px;
-  border-radius: 999px;
-  background: #181818;
-  border: 1px solid rgba(255,255 ,255,.08);
-  color: white;
+
+.card-loja{
+  width: 190px;
+  padding: 22px;
+  background: linear-gradient(
+    145deg,
+    #111111,
+    #1a1a1a
+  );
+  border-radius: 20px;
+  border: 1px solid rgba(255,255 ,255,.05);
+  border-top: 3px solid transparent;
   cursor: pointer;
-  transition: .35s;
+  text-align: center;
+  transition: .35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .30);
 }
 
-.loja-ativa{
-  background: #59ff59;
-  color: #000;
-  box-shadow: 0 0 20px rgba(89,255,89,.35);
+.card-loja i{
+  font-size: 28px;
+  color:#59ff59;
+  margin-bottom: 15px;
 }
 
+.card-loja h4{
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.card-loja span{
+  color:#bcbcbc;
+  font-size: .9rem;
+}
+
+.card-loja:hover{
+  transform: translateY(-8px);
+  border-top-color: #59ff59;
+  box-shadow: 0 15px 35px rgba(89,255,89,.18);
+}
+
+.card-loja.ativo{
+  border-top-color: #59ff59;
+  background: linear-gradient(
+    145deg,
+    #171717;
+    #101010
+  );
+  box-shadow: 0 0 25px rgba(89,255,89,.25);
+}
 /* mapa e video */
 
 .titulo-card{
@@ -837,20 +870,35 @@ transform .7s ease;
   align-items: center;
   justify-content: center;
   gap:12px;
-  margin-bottom: 18px;
-  padding-bottom: 14px;
+  margin-bottom: 25px;
+  padding-bottom: 18px;
   border-bottom: 1px solid rgba(89,255,89,.15);
+  position: relative;
+}
+
+.titulo-card::after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+
+  width: 80px;
+  height: 3px;
+
+  background: #59ff59;
+  border-radius: 999px;
 }
 
 .titulo-card i{
   color: #59ff59;
   font-size: 22px;
+  transition: .3s ease;
 }
 
 .titulo-card h3{
   color: #fff;
   font-size: 1.3rem;
   font-family: "Sora", sans-serif;
+  font-weight: 600;
 }
 
 .conteudo-loja{
