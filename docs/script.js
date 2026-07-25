@@ -202,3 +202,20 @@ function reiniciarAutoplay(){
     autoplay = setInterval(proximaNoticia, 5000)
 };
 
+// Animação Cards Produtos
+
+const cardsProdutos =
+document.querySelectorAll(".card-produto");
+
+const observerProdutos = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("aparecer");
+        }
+    });
+},{
+    threshold:0.25
+});
+cardsProdutos.forEach(card => {
+    observerProdutos.observe(card);
+});
