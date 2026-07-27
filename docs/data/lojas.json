@@ -1,5 +1,5 @@
 [{
-    "regiao":"Piabetá",
+    "regiao":"SmartBlin Piabetá",
     "descricao": "No centro de Piabetá",
     "endereco":"R. Santa Elisa, 134 - Lj B - Piabetá, Magé - RJ, 25931-762",
     "telefone": "(21) 96524-6452",
@@ -9,16 +9,16 @@
 
 },
 {
-    "regiao":"Magé",
+    "regiao":"SmartBlin Magé",
     "descricao": "No calçadão de Magé",
-    "endereco":"Av. Getúlio Vargas, 123 - Magé, Magé - RJ, 25931-762",
-    "telefone": "(21) 0000-0000",
+    "endereco":"Passeio Público Dr. Siqueira, 354 - Vila Esperanca, Magé - RJ, 25903-587",
+    "telefone": "(21) 99075-9775",
     "horario": "De segunda a Sábado: 09:00 às 17:30",
     "mapa": "link_google_maps",
     "video":"assets/video/mage.mp4"
 },
 {
-    "regiao":"Santa Cruz da Serra",
+    "regiao":"SmartBlin Santa Cruz da Serra",
     "descricao": " Shopping Familia",
     "endereco":"Av. Automóvel Clube, 42 - Vila Santa Cruz, Duque de Caxias - RJ, 25260-220",
     "telefone": "(21) 95906-9386",
