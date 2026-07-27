@@ -76,103 +76,91 @@ window.addEventListener("resize", () => {
 // Carrossel Novidades
 // ============================================
 
+// Elementos do DOM
 const indicadores = document.querySelectorAll(".indicador");
-let novidades = [];
-
-fetch("data/noticias.json")
-    .then(resposta => resposta.json)
-    .then(dados => {
-        novidades = dados;
-        atualizarNoticia();
-    })
-    .catch(erro =>{
-        console.error("Erro ao comunicar as noticias:", erro);
-    })
-
 const tag = document.querySelector("#tag-noticia");
 const titulo = document.querySelector("#titulo-noticia");
 const descricao = document.querySelector("#descricao-noticia");
 const imagem = document.querySelector("#imagem-noticia");
 
-let indiceAtual = 0;
-
-function atualizarNoticia(){
-   const noticia = novidades[indiceAtual];
-
-   const elementos = [
-    tag,
-    titulo,
-    descricao,
-    imagem
-   ];
-
-   elementos.forEach(elemento =>{
-    elemento.classList.add("trocando");
-   });
-
-   setTimeout(() =>{
-
-    tag.textContent = noticia.tag;
-    titulo.textContent = noticia.titulo;
-    descricao.textContent = noticia.descricao;
-    imagem.src = noticia.imagem;
-
-    elementos.forEach(elemento =>{
-        elemento.classList.remove("trocando");
-    });
-
-    // Atualiza os Indicadores
-    indicadores.forEach((indicador,indice) => {
-        indicador.classList.toggle("ativo", indice === indiceAtual);
-    });
-
-   },300);
-}
-
-
-
-
-
-indicadores.forEach((indicador, indice) => {
-
-    indicador.addEventListener("click", () => {
-
-        indiceAtual = indice;
-        atualizarNoticia();
-        reiniciarAutoplay();
-
-    });
-
-});
-
-
 const btnAnterior = document.querySelector(".btn-anterior");
 const btnProximo = document.querySelector(".btn-proximo");
 
-btnProximo.addEventListener("click", () => {
-    proximaNoticia();
-    reiniciarAutoplay();
-});
+// Variáveis
+let novidades = [];
+let indiceAtual = 0;
+let autoplay;
 
-btnAnterior.addEventListener("click", () => {
+// ============================================
+// Carregar Notícias (JSON)
+// ============================================
 
-    indiceAtual--;
+fetch("data/noticias.json")
+    .then(resposta => resposta.json())
+    .then(dados => {
 
-    if (indiceAtual < 0){
-        indiceAtual = novidades.length - 1;
-    }
+        novidades = dados;
 
-    atualizarNoticia();
-    reiniciarAutoplay();
+        atualizarNoticia();
 
-});
-// Automaziar o Carrossel
+        autoplay = setInterval(proximaNoticia, 5000);
 
-function proximaNoticia(){
+    })
+    .catch(erro => {
+        console.error("Erro ao carregar as notícias:", erro);
+    });
+
+// ============================================
+// Atualizar Card
+// ============================================
+
+function atualizarNoticia() {
+
+    if (novidades.length === 0) return;
+
+    const noticia = novidades[indiceAtual];
+
+    const elementos = [
+        tag,
+        titulo,
+        descricao,
+        imagem
+    ];
+
+    elementos.forEach(elemento => {
+        elemento.classList.add("trocando");
+    });
+
+    setTimeout(() => {
+
+        tag.textContent = noticia.tag;
+        titulo.textContent = noticia.titulo;
+        descricao.textContent = noticia.descricao;
+        imagem.src = noticia.imagem;
+
+        elementos.forEach(elemento => {
+            elemento.classList.remove("trocando");
+        });
+
+        indicadores.forEach((indicador, indice) => {
+            indicador.classList.toggle("ativo", indice === indiceAtual);
+        });
+
+    }, 300);
+
+}
+
+// ============================================
+// Próxima Notícia
+// ============================================
+
+function proximaNoticia() {
+
+    if (novidades.length === 0) return;
 
     indiceAtual++;
 
-    if (indiceAtual >= novidades.length){
+    if (indiceAtual >= novidades.length) {
         indiceAtual = 0;
     }
 
@@ -180,14 +168,73 @@ function proximaNoticia(){
 
 }
 
-let autoplay = setInterval(proximaNoticia, 5000);
+// ============================================
+// Notícia Anterior
+// ============================================
 
-function reiniciarAutoplay(){
+function noticiaAnterior() {
+
+    if (novidades.length === 0) return;
+
+    indiceAtual--;
+
+    if (indiceAtual < 0) {
+        indiceAtual = novidades.length - 1;
+    }
+
+    atualizarNoticia();
+
+}
+
+// ============================================
+// Reiniciar Autoplay
+// ============================================
+
+function reiniciarAutoplay() {
 
     clearInterval(autoplay);
 
-    autoplay = setInterval(proximaNoticia, 5000)
-};
+    autoplay = setInterval(proximaNoticia, 5000);
+
+}
+
+// ============================================
+// Eventos dos Indicadores
+// ============================================
+
+indicadores.forEach((indicador, indice) => {
+
+    indicador.addEventListener("click", () => {
+
+        indiceAtual = indice;
+
+        atualizarNoticia();
+
+        reiniciarAutoplay();
+
+    });
+
+});
+
+// ============================================
+// Eventos dos Botões
+// ============================================
+
+btnProximo.addEventListener("click", () => {
+
+    proximaNoticia();
+
+    reiniciarAutoplay();
+
+});
+
+btnAnterior.addEventListener("click", () => {
+
+    noticiaAnterior();
+
+    reiniciarAutoplay();
+
+});
 
 // Animação Cards Produtos
 
@@ -208,11 +255,7 @@ cardsProdutos.forEach(card => {
 });
 
 cardsProdutos.forEach((card, index) => {
-    card.style.transitionDelay = '{index * 0.15}s';
+    card.style.transitionDelay = `${index * 0.15}s`;
     observerProdutos.observe(card);
 });
 
-if(entry.isIntersecting){
-    entry.target.classList.add("aparecer");
-    observerProdutos.unobserve(entry.target);
-}
