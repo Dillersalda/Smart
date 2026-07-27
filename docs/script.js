@@ -77,30 +77,17 @@ window.addEventListener("resize", () => {
 // ============================================
 
 const indicadores = document.querySelectorAll(".indicador");
-const novidades = [
-    {
-    tag:"NOVO MODELO",
-    titulo: "NOVA SCOOTER G15",
-    descricao: "Conheça o mais novo modelo da Scooter eletrica disponível em nossas unidades. Mais autonomia, design renovado e painel totalmente digital.",
-    imagem: "assets/Images/scooter.png"
-},
+let novidades = [];
 
-{  
-    tag:"BOLETO",
-    titulo: "SEU APARELHO NOVO EM ATÉ 24X",
-    descricao: "Celular no boleto sem consulta SPC ou Serasa em até 18x! Confira nossas opções de boletos e veja a que melhor lhe atende!",
-    imagem: "assets/Images/boleto.jpg"
-},
-
-{
-    tag:"SERVIÇO",
-    titulo: "Assistência Tecnica",
-    descricao: "Seu aparelho pronto em até 40 minutos em nossa Assistência Tecnica Expecializada!.",
-    imagem: "assets/Images/Assistencia.png"
-}
-
-    
-];
+fetch("data/noticias.json")
+    .then(resposta => resposta.json)
+    .then(dados => {
+        novidades = dados;
+        atualizarNoticia();
+    })
+    .catch(erro =>{
+        console.error("Erro ao comunicar as noticias:", erro);
+    })
 
 const tag = document.querySelector("#tag-noticia");
 const titulo = document.querySelector("#titulo-noticia");
@@ -142,7 +129,7 @@ function atualizarNoticia(){
    },300);
 }
 
-atualizarNoticia();
+
 
 
 

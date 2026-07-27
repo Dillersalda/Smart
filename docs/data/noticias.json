@@ -1,0 +1,20 @@
+[
+    {
+        "tag": "NOVO MODELO",
+        "titulo": "NOVA SCOOTER",
+        "Descricao": "Conheça o mais novo modelo da Scooter eletrica disponível em nossas unidades. Mais autonomia, design renovado e painel totalmente digital.",
+        "imagem": "assets/Images/scooter.png"
+    },
+     {
+        "tag":"BOLETO",
+        "titulo":"SEU APARELHO NOVO EM ATÉ 24X",
+        "Descricao":"Celular no boleto sem consulta SPC ou Serasa em até 18x! Confira nossas opções de boletos e veja a que melhor lhe atende!",
+        "imagem":"assets/Images/boleto.png"
+    },
+     {
+        "tag":"SERVIÇO",
+        "titulo":"Assistência Tecnica",
+        "Descricao":"Seu aparelho pronto em até 40 minutos em nossa Assistência Tecnica Expecializada!.",
+        "imagem":"assets/Images/Assistencia.png"
+    }
+]
