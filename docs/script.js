@@ -259,3 +259,54 @@ cardsProdutos.forEach((card, index) => {
     observerProdutos.observe(card);
 });
 
+// ============================================
+// Localização SmartBlin
+// ============================================
+
+const listaLojas = document.querySelector("#lista-lojas");
+
+let lojas = [];
+let lojaAtual = 0;
+
+// carregar lojas JSON
+
+fetch("data/lojas.json")
+    .then(resposta => resposta.json())
+    .then(dados => {
+
+        lojas = dados;
+        criarCardsLojas();
+    })
+
+    .catch(erro => {
+        console.error("Erro ao carregar lojas".erro);
+    });
+
+function criarCardsLojas() {
+    lojas.forEach((loja, indice) => {
+        const card = document.createElement("div");
+        card.classList.add("card-loja");
+
+        if(indice === 0){
+            card.classList.add("ativo");
+        }
+
+        card.innerHTML =
+        `<i class="fa-solid fa-location-dot"></i>
+        <h4>${loja.regiao}</h4>
+        <span>${loja.descricao}</span>`;
+
+        card.addEventListener("click",() => {
+
+            const todosCards = document.querySelectorAll(".card-loja");
+
+            todosCards.forEach(card => {
+                card.classList.remove("ativo");
+            });
+
+            card.classList.add("ativo");
+        })
+
+        listaLojas.appendChild(card);
+    });
+}

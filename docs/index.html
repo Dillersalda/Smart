@@ -242,25 +242,9 @@
     <p>Conheça nossas unidades e encontre a SmartBlin mais proxima de você.</p>
   </div>
 
-  <div class="seletor-lojas">
+  <div class="seletor-lojas" id="lista-lojas">
 
-    <div class="card-loja ativo">
-      <i class="fa-solid fa-location-dot"></i>
-      <h4>Piabetá</h4>
-      <span>Matriz - No centro de Piabetá</span>
-    </div>
 
-    <div class="card-loja">
-      <i class="fa-solid fa-location-dot"></i>
-      <h4>Magé</h4>
-      <span>No calçadão de Magé</span>
-    </div>
-
-    <div class="card-loja">
-      <i class="fa-solid fa-location-dot"></i>
-      <h4>Santa Cruz da Serra</h4>
-      <span>No Shopping Familia</span>
-    </div>
   </div>
 
   <div class="conteudo-loja">
@@ -271,7 +255,7 @@
         <h3>Localização</h3>
       </div>
       <div class="mapa">
-        <!--Google Maps-->
+        <iframe id="mapa-loja" loading="lazy"></iframe>
       </div>
     </div>
 
@@ -281,13 +265,19 @@
         <h3>Conheça a loja</h3>
       </div>
       <div class="video-loja">
-        <!--video da loja-->
+        <video id="video-loja" controls></video>
       </div>
     </div>
    
   </div>
 
   <div class="informacoes-loja">
+
+    <h3 id="nome-loja"></h3>
+
+    <p id="endereco-loja"></p>
+    
+    <span id="horario-loja"></span>
 
   </div>
 
