@@ -858,7 +858,7 @@ transform .7s ease;
   border-top-color: #59ff59;
   background: linear-gradient(
     145deg,
-    #171717;
+    #171717,
     #101010
   );
   box-shadow: 0 0 25px rgba(89,255,89,.25);
@@ -938,6 +938,10 @@ transform .7s ease;
   color: #d5d5d5;
 }
 
+.trocando-localização{
+  opacity:0;
+  transform:translateY(10px);
+}
 
 
 /*  /   /   /   /   Responsividades /   /   /   /   */

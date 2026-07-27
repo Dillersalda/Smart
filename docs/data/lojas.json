@@ -2,7 +2,7 @@
     "regiao":"Piabetá",
     "descricao": "No centro de Piabetá",
     "endereco":"Rua Santa Elisa, 134",
-    "contato": "(21) 96524-6452",
+    "telefone": "(21) 96524-6452",
     "horario": "De segunda a Sábado: 09:00 às 19:00",
     "mapa": "link_google_maps",
     "video":"assets/video/piabeta.mp4"
@@ -12,8 +12,8 @@
     "regiao":"Magé",
     "descricao": "No calçadão de Magé",
     "endereco":"",
-    "contato": "(21) 0000-0000",
-    "horario": "09:00 às 18:00",
+    "telefone": "(21) 0000-0000",
+    "horario": "De segunda a Sábado: 09:00 às 17:30",
     "mapa": "link_google_maps",
     "video":"assets/video/mage.mp4"
 },
@@ -21,8 +21,8 @@
     "regiao":"Santa Cruz da Serra",
     "descricao": "Dentro do Shopping Familia",
     "endereco":"",
-    "contato": "(21) 95906-9386",
-    "horario": "09:00 às 18:00",
+    "telefone": "(21) 95906-9386",
+    "horario": "De segunda a Sábado: 09:00 às 18:30",
     "mapa": "link_google_maps",
     "video":"assets/video/santac.mp4"
 

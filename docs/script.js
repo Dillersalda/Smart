@@ -86,6 +86,7 @@ const imagem = document.querySelector("#imagem-noticia");
 const btnAnterior = document.querySelector(".btn-anterior");
 const btnProximo = document.querySelector(".btn-proximo");
 
+
 // Variáveis
 let novidades = [];
 let indiceAtual = 0;
@@ -265,6 +266,14 @@ cardsProdutos.forEach((card, index) => {
 
 const listaLojas = document.querySelector("#lista-lojas");
 
+const nomeLoja = document.querySelector("#nome-loja");
+const enderecoLoja = document.querySelector("#endereco-loja");
+const telefoneLoja = document.querySelector("#telefone-loja");
+const horarioLoja = document.querySelector("#horario-loja");
+
+const mapaLoja = document.querySelector("#mapa-loja");
+const videoLoja = document.querySelector("#video-loja");
+
 let lojas = [];
 let lojaAtual = 0;
 
@@ -298,6 +307,8 @@ function criarCardsLojas() {
 
         card.addEventListener("click",() => {
 
+            lojaAtual = indice;
+
             const todosCards = document.querySelectorAll(".card-loja");
 
             todosCards.forEach(card => {
@@ -305,8 +316,61 @@ function criarCardsLojas() {
             });
 
             card.classList.add("ativo");
+
+            atualizarLoja();
         })
 
         listaLojas.appendChild(card);
     });
 }
+
+// Atualizar informações da loja
+
+function atualizarLoja(){
+
+    const loja = lojas[lojaAtual];
+
+
+    elementosLoja.forEach(elemento => {
+
+        elemento.classList.add("trocando-localizacao");
+
+    });
+
+
+    setTimeout(() => {
+
+
+        nomeLoja.textContent = loja.regiao;
+
+        enderecoLoja.textContent = loja.endereco;
+
+        telefoneLoja.textContent = loja.telefone;
+
+        horarioLoja.textContent = loja.horario;
+
+
+        mapaLoja.src = loja.mapa;
+
+        videoLoja.src = loja.video;
+
+
+
+        elementosLoja.forEach(elemento => {
+
+            elemento.classList.remove("trocando-localizacao");
+
+        });
+
+
+    },300);
+
+}
+const elementosLoja = [
+    nomeLoja,
+    enderecoLoja,
+    telefoneLoja,
+    horarioLoja,
+    mapaLoja,
+    videoLoja
+];
