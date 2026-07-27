@@ -943,6 +943,57 @@ transform .7s ease;
   transform:translateY(10px);
 }
 
+.informacoes-loja,
+.mapa iframe,
+.video-loja video{
+  transition: .3s ease;
+}
+
+.informacoes-loja{
+  display: flex;
+flex-direction: column;
+align-items: center;
+  margin-top:30px;
+  background: #111;
+  border: 1px solid rgba(89,255,89,.2);
+  border-radius: 20px;
+  padding:25px;
+}
+
+.info-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom: 18px;
+
+}
+
+.info-item i, .endereco-mapa i{
+  color: #59ff59;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.informacoes-loja h3{
+  color:#59ff59;
+  font-size:2rem;
+  margin-bottom:25px;
+  padding-bottom:13px;
+  border-bottom: 1px solid rgba(89,255,89,.25);
+}
+
+.info-item p, .endereco-mapa p{
+  margin:0;
+  color:#fff;
+}
+
+endereco-mapa{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
 
 /*  /   /   /   /   Responsividades /   /   /   /   */
 

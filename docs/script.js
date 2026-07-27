@@ -274,6 +274,7 @@ const horarioLoja = document.querySelector("#horario-loja");
 const mapaLoja = document.querySelector("#mapa-loja");
 const videoLoja = document.querySelector("#video-loja");
 
+
 let lojas = [];
 let lojaAtual = 0;
 
@@ -314,6 +315,7 @@ function criarCardsLojas() {
             todosCards.forEach(card => {
                 card.classList.remove("ativo");
             });
+
 
             card.classList.add("ativo");
 
@@ -374,3 +376,4 @@ const elementosLoja = [
     mapaLoja,
     videoLoja
 ];
+
