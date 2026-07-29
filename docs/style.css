@@ -895,7 +895,7 @@ transform .7s ease;
 }
 
 .titulo-card h3{
-  color: #fff;
+  color: #fff; 
   font-size: 1.3rem;
   font-family: "Sora", sans-serif;
   font-weight: 600;
@@ -917,9 +917,39 @@ transform .7s ease;
   transition: .4s;
 }
 
+.video-loja{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-loja video{
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
 .mapa:hover,.video-loja:hover{
   transform:translateY(-6px);
   box-shadow:0 20px 40px rgba(0, 0, 0, .45);
+}
+
+.endereco-mapa{
+    max-width: 700px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.mapa iframe{
+  width: 100%;
+  height: 350px;
 }
 
 /* informações */
@@ -972,7 +1002,7 @@ align-items: center;
 .info-item i, .endereco-mapa i{
   color: #59ff59;
   font-size: 1.1rem;
-  width: 20px;
+  width: 40px;
   text-align: center;
 }
 
@@ -987,6 +1017,7 @@ align-items: center;
 .info-item p, .endereco-mapa p{
   margin:0;
   color:#fff;
+  text-align: center;
 }
 
 endereco-mapa{
@@ -994,6 +1025,8 @@ endereco-mapa{
   align-items:center;
   gap:12px;
 }
+
+
 
 
 /*  /   /   /   /   Responsividades /   /   /   /   */

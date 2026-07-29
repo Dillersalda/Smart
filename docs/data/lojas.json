@@ -4,26 +4,25 @@
     "endereco":"R. Santa Elisa, 134 - Lj B - Piabetá, Magé - RJ, 25931-762",
     "telefone": "(21) 96524-6452",
     "horario": "De segunda a Sábado: 09:00 às 19:00",
-    "mapa": "link_google_maps",
+    "mapa":"https://www.google.com/maps/embed?pb=!4v1785358234829!6m8!1m7!1sDnVOH1t56cer_wBi931k8g!2m2!1d-22.61056838695074!2d-43.17779965369799!3f148.603028864343!4f-1.121307271703131!5f0.4000000000000002",
     "video":"assets/video/piabeta.mp4"
 
 },
 {
     "regiao":"SmartBlin Magé",
     "descricao": "No calçadão de Magé",
-    "endereco":"Passeio Público Dr. Siqueira, 354 - Vila Esperanca, Magé - RJ, 25903-587",
+    "endereco":"Passeio Público Dr. Siqueira, 354 - Vila Esperanca, Magé - RJ, 25903-587 (Antiga Drogaria Mais Barato)",
     "telefone": "(21) 99075-9775",
     "horario": "De segunda a Sábado: 09:00 às 17:30",
-    "mapa": "link_google_maps",
-    "video":"assets/video/mage-video.mp4"
+    "mapa": "https://www.google.com/maps/embed?pb=!4v1785352940491!6m8!1m7!1sPo_cdCse8wJOsIrWl2ckEw!2m2!1d-22.65606745140279!2d-43.03927953303825!3f124.3207683463454!4f-1.1695986709683694!5f0.4000000000000002",
+    "video":"assets/video/smart-mage.mp4"
 },
 {
     "regiao":"SmartBlin Santa Cruz da Serra",
     "descricao": " Shopping Familia",
     "endereco":"Av. Automóvel Clube, 42 - Vila Santa Cruz, Duque de Caxias - RJ, 25260-220",
     "telefone": "(21) 95906-9386",
-    "horario": "De segunda a Sábado: 09:00 às 18:30",
-    "mapa": "link_google_maps",
-    "video":"assets/video/santac.mp4"
+    "horario": "De segunda a Sábado: das 09:00 as 18:00",
+    "mapa": "https://www.google.com/maps/embed?pb=!4v1785352677355!6m8!1m7!1sl00oy6DW6H5Lu_ZraJWy6g!2m2!1d-22.64288188337275!2d-43.28270591963298!3f215.7299!4f0!5f0.7820865974627469"
 
 }]
