@@ -947,6 +947,12 @@ transform .7s ease;
 
 }
 
+.endereco-mapa {
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
 .mapa iframe{
   width: 100%;
   height: 350px;
