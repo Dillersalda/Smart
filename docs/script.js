@@ -289,7 +289,7 @@ fetch("data/lojas.json")
     })
 
     .catch(erro => {
-        console.error("Erro ao carregar lojas".erro);
+        console.error("Erro ao carregar lojas", erro);
     });
 
 function criarCardsLojas() {
@@ -355,7 +355,9 @@ function atualizarLoja(){
         mapaLoja.src = loja.mapa;
 
         videoLoja.src = loja.video;
-
+        videoLoja.pause();
+        videoLoja.src = loja.video;
+        videoLoja.load();
 
 
         elementosLoja.forEach(elemento => {
