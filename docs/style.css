@@ -938,19 +938,38 @@ transform .7s ease;
 .endereco-mapa{
     max-width: 700px;
     height: 100%;
+    width:100%;
     object-fit: cover;
     border-radius: 16px;
-    display: inline-flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #161616;
+    border-top: 1px solid rgba(89,255,89.15);
+    text-align: left;
+    box-sizing: border-box;
 }
 
-.endereco-mapa {
-  height: 100px;
-  width: 100px;
-  text-align: center;
+.endereco-mapa i{
+  color: #59ff59;
+  font-size: 22px;
+  margin-top: 4px;
+}
+
+.endereco-mapa p{
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  line-height:1.7;
+}
+
+
+
+.endereco-loja{
+  width:200px;
+  height: 200px;
 }
 
 .mapa iframe{
@@ -1026,11 +1045,7 @@ align-items: center;
   text-align: center;
 }
 
-endereco-mapa{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+
 
 
 
@@ -1056,6 +1071,19 @@ endereco-mapa{
     grid-template-columns: repeat(2,1fr);
     gap:30px;
   }
+
+  .conteudo-loja{
+  gap:20px;
+  }
+
+  .mapa iframe{
+  height: 320px;
+  }
+
+  .video-loja video{
+  height: 320px;
+  }
+
 }
 
 @media (max-width:768px){
@@ -1197,6 +1225,11 @@ endereco-mapa{
     margin: auto;
   }
 
+.conteudo-loja{
+  grid-template-columns: 1fr;
+  gap:35px;
+}
+
 }
 
 @media (max-width:576px){
@@ -1265,8 +1298,21 @@ endereco-mapa{
     font-size: 2rem;
   }
 
+  .titulo-card h3{
+    font-size: 1.1rem;
+  }
+  
+  .mapa iframe{
+    height:280px;
+  }
 
+  .video-loja video{
+    height: 280px;
+  }
 
+  .informacoes-loja{
+    padding: 20px;
+  }
 }
 
 @media (max-width:400px){
@@ -1311,6 +1357,17 @@ endereco-mapa{
     width: 40px;
     height: 40px;
   }
+
+  .info-item{
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 0;
+  }
+
+  .informacoes-loja h3{
+    font-size: 1.5rem;
+  }
+
 }
 
 @media (max-width:360px){
@@ -1353,6 +1410,18 @@ endereco-mapa{
 
 .conteudo-produto p{
   font-size: .95rem;
+}
+
+.titulo-localizacao{
+  font-size: 2rem;
+}
+
+.endereco-mapa{
+  padding: 15px;
+}
+
+.endereco-mapa p{
+  font-size:.9rem;
 }
 
 }
