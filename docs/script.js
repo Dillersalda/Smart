@@ -283,9 +283,9 @@ let lojaAtual = 0;
 fetch("data/lojas.json")
     .then(resposta => resposta.json())
     .then(dados => {
-
-        lojas = dados;
-        criarCardsLojas();
+    lojas = dados;
+    criarCardsLojas();
+    atualizarLoja();
     })
 
     .catch(erro => {
